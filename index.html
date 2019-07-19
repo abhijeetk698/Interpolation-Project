@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plotting functions in JavaScript using the function plot library</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8" />
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+</head>
+
+<body>
+  <div >
+    <h1 align="center">Enter data Sets</h1>
+    <form>
+    <div class="inDiv" >Enter space seperated x values <input type="text" class="in" id="xValues"></div>
+    <div class="inDiv" >Enter space seperated y values <input type="text" class="in" id="yValues"></div>    
+    <div class="inDiv"><button type="button" id="mainbttn">submit</button></div>    
+  </form>
+  </div>
+  <hr>
+  <h2>FUNCTION PLOTTER</h2>
+  <div class="layer">
+  <div id="plotSettings" class="section">
+    <label for="xMin">xMin: </label> value: <input type=number id="xMin" value=-5 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="xMin">xMax: </label> value: <input type=number id="xMax" value=6.28 step=0.5 oninput="plot();">
+
+    <p></p>
+    <label for="yMin">yMin: </label> value: <input type=number id="yMin" value=-6 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="yMax">yMahow to have how tox: </label> value: <input type=number id="yMax" value=6 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="color">Color: </label> value: <input type=color id="color" onchange="plot();">
+    <p></p>
+    <label for="function">Function to plot: </label>
+    <input id="function" type="text" value="sin(x)" onchange="plot();">
+    <p></p>
+    <button id="bttn">Plot it!</button>
+
+  </div>
+
+  <div id="plot" class="section">
+    <div id="myFunction"></div>
+  </div >
+  </div>
+  <script  src="./script.js"></script>
+</body>
+</html>
