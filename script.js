@@ -38,20 +38,6 @@ for(var j=1;j<count;j++){
 variator.push(arr2[0]);
 }
 /********************************/
-function value(){
-var f="";
-f+=String(variator[0]);
-var multiplier=1;
-for(var i=0;i<(count-1);i++){
-    var m="(1";
-    for(var j=0;j<=i;j++){
-        m+="*"+"(x-"+String(arr1[j])+")";
-    }
-    m+=")";
-    f+=("+"+m+"*"+String(variator[i+1]));
-}
-return f;
-}
 /**********************************************/
 document.querySelector("#function").value=value();
 plot();
